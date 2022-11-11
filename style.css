@@ -181,6 +181,14 @@ aside p{
         height: 100vh;
     }
 
+    .logo {
+        margin-top: 1.5rem;
+    }
+
+    header {
+        margin-bottom: 1.5rem;
+    }
+
     .content-container{
         grid-template-columns: 1fr;
         grid-template-areas: 
