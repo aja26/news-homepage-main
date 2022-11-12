@@ -190,12 +190,17 @@ aside p{
         margin-bottom: 1.5rem;
     }
 
+    .featured-post h1 {
+        margin: 1.5rem 0 0rem;
+    }
+
     .content-container{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "feat-grid"
          "aside"
         "01" "02" "03";
+        padding-bottom: 2rem;
     }
 
     .featured-post{
