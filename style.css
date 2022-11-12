@@ -146,6 +146,7 @@ aside h2{
 aside h3{
     color: var(--off-white);
     margin-top: 1.5rem;
+    font-size: clamp(20px, 1.5vw, 3rem);
 }
 
 aside p{
