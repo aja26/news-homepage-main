@@ -32,7 +32,7 @@ body{
 }
 
 main {
-    width: clamp(58rem, 70vw, 80rem);
+    width: clamp(60rem, 70vw, 80rem);
     place-self: center;
 }
 
@@ -111,12 +111,12 @@ li:hover{
 
 .featured-post h1{
     grid-area: title;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
 .featured-post .content{
    grid-area: feat-content;
-   margin: 1.5rem 0;
+   margin: 2rem 0;
 }
 
 button{
