@@ -28,6 +28,7 @@ body{
     display: grid;
     height: 100vh;
     align-content: center;
+    background-color: rgba(0,0,0,0);
 }
 
 main {
@@ -70,6 +71,11 @@ ul li{
 
 ul li:where(:not(:last-child)){
     padding: 0rem 1rem;
+}
+
+li:hover{
+    color: var(--soft-orange);
+    cursor: pointer;
 }
 
 .content-container{
@@ -124,6 +130,11 @@ button{
     margin-top: 1.5rem;
 }
 
+button:hover{
+    background-color: var(--very-dark-blue);
+    cursor: pointer;
+}
+
 aside{
     background: var(--very-dark-blue);
     grid-area: aside;
@@ -142,10 +153,19 @@ aside h2{
     font-size: 2.5rem;
 }
 
+aside hr{
+    border-color: var(--dark-grayish-blue);
+}
+
 aside h3{
     color: var(--off-white);
     margin-top: 1.5rem;
-    font-size: clamp(20px, 1.25vw, 2rem);
+    font-size: clamp(16px, 1.20vw, 1.75rem);
+}
+
+aside h3:hover{
+    cursor: pointer;
+    color: var(--soft-orange);
 }
 
 aside p{
@@ -167,6 +187,11 @@ aside p{
 .more-news h4{
     margin-block: 0.5rem;
 }
+
+.more-news h4:hover{
+    cursor: pointer;
+    color: var(--soft-orange);
+}   
 
 .more-news span{
     font-size: 2.25rem;
@@ -192,13 +217,30 @@ aside p{
         margin: 1.5rem 0 0rem;
     }
 
+    body::before{
+        content: '';
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    body.active::before {
+        background-color: rgba(0,0,0,0.5);
+        transition: background-color 0.35s linear;
+        z-index: 0;
+      }
+
     .content-container{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "feat-grid"
          "aside"
         "01" "02" "03";
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
     }
 
     .featured-post{
@@ -208,6 +250,10 @@ aside p{
 
     .featured-post picture{
         background-image: url('assets/images/image-web-3-mobile.jpg');
+    }
+
+    aside{
+        margin-bottom: 2rem;
     }
 
     .more-news {
@@ -245,6 +291,7 @@ aside p{
 
     ul li{
         display: block;
+        padding: 1rem 0rem;
+        font-size: 1.25rem;
     }
-
 }
